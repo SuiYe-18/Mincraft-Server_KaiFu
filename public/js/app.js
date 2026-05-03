@@ -1,0 +1,47 @@
+const sel=document.getElementById("ver");
+opt=document.createElement("option");opt.value="1.0.0";opt.innerText="1.0.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.1.0";opt.innerText="1.1.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.2.5";opt.innerText="1.2.5";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.3.2";opt.innerText="1.3.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.4.7";opt.innerText="1.4.7";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.5.2";opt.innerText="1.5.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.6.4";opt.innerText="1.6.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.7.10";opt.innerText="1.7.10";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.8.8";opt.innerText="1.8.8";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.9.4";opt.innerText="1.9.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.10.2";opt.innerText="1.10.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.11.2";opt.innerText="1.11.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.12.2";opt.innerText="1.12.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.13.2";opt.innerText="1.13.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.14.4";opt.innerText="1.14.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.15.2";opt.innerText="1.15.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.16.5";opt.innerText="1.16.5";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.17.1";opt.innerText="1.17.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.18.2";opt.innerText="1.18.2";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.19.4";opt.innerText="1.19.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.20.1";opt.innerText="1.20.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.20.4";opt.innerText="1.20.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.21.1";opt.innerText="1.21.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.21.3";opt.innerText="1.21.3";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="1.21.4";opt.innerText="1.21.4";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="22.0.1";opt.innerText="22.0.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="22.1.0";opt.innerText="22.1.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="23.0.1";opt.innerText="23.0.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="23.1.0";opt.innerText="23.1.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="24.0.1";opt.innerText="24.0.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="24.1.0";opt.innerText="24.1.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="25.0.1";opt.innerText="25.0.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="25.1.0";opt.innerText="25.1.0";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="26.0.1";opt.innerText="26.0.1";sel.appendChild(opt);
+opt=document.createElement("option");opt.value="26.1.2";opt.innerText="26.1.2";sel.appendChild(opt);
+document.getElementById("ver").value="26.1.2";
+function ip(){document.getElementById("localip").innerText="192.168.1.100"}
+window.onload=ip;
+document.getElementById("download").onclick=()=>{alert("下载："+document.getElementById("ver").value)};
+document.getElementById("localjar").onclick=()=>{
+const i=document.createElement("input");i.type="file";i.accept=".jar";
+i.onchange=e=>{document.getElementById("jarstatus").innerText="已选："+e.target.files[0].name};i.click();};
+document.getElementById("start").onclick=()=>{
+document.getElementById("state").innerText="运行中";document.getElementById("state").className="on"};
+document.getElementById("stop").onclick=()=>{
+document.getElementById("state").innerText="离线";document.getElementById("state").className="off"};
